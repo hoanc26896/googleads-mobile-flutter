@@ -43,7 +43,7 @@ void main() {
       instanceManager =
           AdInstanceManager('plugins.flutter.io/google_mobile_ads');
       log.clear();
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(
               MethodChannel(
                 'plugins.flutter.io/google_mobile_ads',
@@ -205,7 +205,7 @@ void main() {
     });
 
     test('$MobileAds.openAdInspector success', () async {
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(
               MethodChannel(
                 'plugins.flutter.io/google_mobile_ads',
@@ -224,7 +224,7 @@ void main() {
     });
 
     test('$MobileAds.openAdInspector error', () async {
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(
               MethodChannel(
                 'plugins.flutter.io/google_mobile_ads',

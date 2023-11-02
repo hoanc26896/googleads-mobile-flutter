@@ -38,7 +38,7 @@ void main() {
           tagForUnderAgeOfConsent: true,
           consentDebugSettings: ConsentDebugSettings());
 
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         expect(
             call.method, equals('ConsentInformation#requestConsentInfoUpdate'));
@@ -65,7 +65,7 @@ void main() {
           tagForUnderAgeOfConsent: true,
           consentDebugSettings: ConsentDebugSettings());
 
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         expect(
             call.method, equals('ConsentInformation#requestConsentInfoUpdate'));
@@ -96,7 +96,7 @@ void main() {
     });
 
     test('isConsentFormAvailable() true', () async {
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         expect(
             call.method, equals('ConsentInformation#isConsentFormAvailable'));
@@ -110,7 +110,7 @@ void main() {
     });
 
     test('isConsentFormAvailable() false', () async {
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         expect(
             call.method, equals('ConsentInformation#isConsentFormAvailable'));
@@ -124,7 +124,7 @@ void main() {
     });
 
     test('getConsentStatus()', () async {
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         expect(call.method, equals('ConsentInformation#getConsentStatus'));
         expect(call.arguments, null);
@@ -139,7 +139,7 @@ void main() {
     test('reset()', () async {
       String? method;
       dynamic arguments;
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         method = call.method;
         arguments = call.arguments;
@@ -156,7 +156,7 @@ void main() {
       String? method;
       dynamic arguments;
       ConsentForm consentForm = ConsentFormImpl(1);
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         method = call.method;
         arguments = call.arguments;
@@ -182,7 +182,7 @@ void main() {
     test('loadConsentForm() error', () async {
       String? method;
       dynamic arguments;
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         method = call.method;
         arguments = call.arguments;
@@ -209,7 +209,7 @@ void main() {
       String? method;
       dynamic arguments;
       ConsentFormImpl consentForm = ConsentFormImpl(1);
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         method = call.method;
         arguments = call.arguments;
@@ -232,7 +232,7 @@ void main() {
       String? method;
       dynamic arguments;
       ConsentFormImpl consentForm = ConsentFormImpl(1);
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         method = call.method;
         arguments = call.arguments;
@@ -254,7 +254,7 @@ void main() {
     test('disposeConsentForm()', () async {
       String? method;
       dynamic arguments;
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(methodChannel, (MethodCall call) async {
         method = call.method;
         arguments = call.arguments;

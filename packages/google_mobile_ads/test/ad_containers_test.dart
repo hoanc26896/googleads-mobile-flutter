@@ -23,7 +23,7 @@ import 'package:flutter/services.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 Future<void> handlePlatformMessage(ByteData? data) async {
-  await TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+  await TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
       .handlePlatformMessage(
           'plugins.flutter.io/google_mobile_ads', data, (data) {});
 }
@@ -40,7 +40,7 @@ void main() {
       log.clear();
       instanceManager =
           AdInstanceManager('plugins.flutter.io/google_mobile_ads');
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(instanceManager.channel,
               (MethodCall methodCall) async {
         log.add(methodCall);
