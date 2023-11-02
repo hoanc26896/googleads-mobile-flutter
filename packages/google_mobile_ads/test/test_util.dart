@@ -35,7 +35,7 @@ class TestUtil {
     final MethodCall methodCall = MethodCall('onAdEvent', args);
     final ByteData data =
         instanceManager.channel.codec.encodeMethodCall(methodCall);
-    await TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+    await TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
         .handlePlatformMessage(
             'plugins.flutter.io/google_mobile_ads', data, (data) {});
   }

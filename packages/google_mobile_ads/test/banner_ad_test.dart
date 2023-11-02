@@ -32,7 +32,7 @@ void main() {
       log.clear();
       instanceManager =
           AdInstanceManager('plugins.flutter.io/google_mobile_ads');
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
           .setMockMethodCallHandler(instanceManager.channel,
               (MethodCall methodCall) async {
         log.add(methodCall);
@@ -171,7 +171,7 @@ void main() {
 
         final ByteData data =
             instanceManager.channel.codec.encodeMethodCall(methodCall);
-        await TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        await TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
             .handlePlatformMessage(
                 'plugins.flutter.io/google_mobile_ads', data, (data) {});
 
